@@ -10,6 +10,7 @@ import requests
 
 API_URL = "https://jsonplaceholder.typicode.com/"
 
+
 def export_all_to_json():
     """
     Export data for all employees in JSON format.
@@ -41,6 +42,6 @@ def export_all_to_json():
     with open(json_file_name, "w") as json_file:
         json.dump(all_employees_data, json_file, indent=2)
 
+
 if __name__ == "__main__":
     export_all_to_json()
-

@@ -11,6 +11,7 @@ import sys
 
 API_URL = "https://jsonplaceholder.typicode.com/"
 
+
 def export_to_csv(employee_id):
     """
     Export data in CSV format for a given employee ID.
@@ -38,6 +39,7 @@ def export_to_csv(employee_id):
                 task.get("title", "")
             ])
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: ./export_to_csv.py <employee id>")
@@ -45,4 +47,3 @@ if __name__ == "__main__":
 
     employee_id = sys.argv[1]
     export_to_csv(int(employee_id))
-

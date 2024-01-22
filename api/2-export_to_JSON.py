@@ -11,6 +11,7 @@ import sys
 
 API_URL = "https://jsonplaceholder.typicode.com/"
 
+
 def export_to_json(employee_id):
     """
     Export data in JSON format for a given employee ID.
@@ -33,6 +34,7 @@ def export_to_json(employee_id):
             "username": employee.get("username", "")
         } for task in todo_list]}, json_file, indent=2)
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: ./export_to_json.py <employee id>")
@@ -40,4 +42,3 @@ if __name__ == "__main__":
 
     employee_id = sys.argv[1]
     export_to_json(int(employee_id))
-
