@@ -29,7 +29,6 @@ def export_to_csv(employee_id):
 
     with open("{}.csv".format(employee_id), "w", newline="") as csv_file:
         writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
-        writer.writerow(["Employee ID", "Username", "Completed", "Title"])
 
         for task in todo_list:
             writer.writerow([
